@@ -10,6 +10,7 @@ powershell -command "sudo Install-Module PSWindowsUpdate"
 powershell -command "sudo Install-WindowsUpdate"
 
 powershell -command "scoop install aria2"
+powershell -command "scoop config aria2-enabled false"
 powershell -command "scoop config aria2-max-connection-per-server 16"
 powershell -command "scoop config aria2-min-split-size 1M"
 powershell -command "scoop config aria2-split 16"
