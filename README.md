@@ -1,1 +1,1 @@
-# win
+curl https://raw.githubusercontent.com/voltamage/win/main/setup.bat -O && setup.bat
