@@ -1,5 +1,3 @@
-powershell -command "rm setup.bat"
-
 powershell -command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 powershell -command "iwr -useb get.scoop.sh | iex"
 
