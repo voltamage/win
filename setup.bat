@@ -1,6 +1,12 @@
-echo Install Scoop
 powershell -command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 powershell -command "iwr -useb get.scoop.sh | iex"
+
+powershell -command "scoop install gsudo"
+powershell -command "sudo Rename-Computer -NewName 'WINDOWS'"
+
+powershell -command "sudo Install-Module PSWindowsUpdate"
+powershell -command "sudo Install-WindowsUpdate"
+pause
 
 REM echo Install VPN
 REM powershell -command "scoop install main/git"
