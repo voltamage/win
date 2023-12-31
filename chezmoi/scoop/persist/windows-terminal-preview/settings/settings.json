@@ -42,7 +42,11 @@
     {
         "defaults": 
         {
-            "colorScheme": "GruvboxMaterialMediumDark"
+            "colorScheme": "GruvboxMaterialMediumDark",
+            "font": 
+            {
+                "face": "JetBrainsMono Nerd Font Mono"
+            }
         },
         "list": 
         [
