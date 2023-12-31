@@ -45,8 +45,12 @@
             "colorScheme": "GruvboxMaterialMediumDark",
             "font": 
             {
-                "face": "JetBrainsMono Nerd Font Mono"
-            }
+                "face": "JetBrainsMono Nerd Font Mono",
+                "size": 11.0,
+                "weight": "medium"
+            },
+            "opacity": 85,
+            "useAcrylic": true
         },
         "list": 
         [
