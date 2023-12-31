@@ -1,13 +1,10 @@
 powershell -command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 powershell -command "iwr -useb get.scoop.sh | iex"
-powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
-powershell -command "Get-ChildItem env:"
+echo Restart script from the main user folder
 pause
 
 powershell -command "scoop install git"
 powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
-powershell -command "Get-ChildItem env:"
-pause
 powershell -command "git clone git@github.com:voltamage/win.git"
 
 powershell -command "scoop install gsudo"
@@ -23,6 +20,8 @@ echo Restart system now, rerun script after
 pause
 
 powershell -command "wsl --update"
+powershell -command "wsl --update"
+pause
 
 powershell -command "scoop bucket add extras"
 powershell -command "scoop install extras/archwsl"
