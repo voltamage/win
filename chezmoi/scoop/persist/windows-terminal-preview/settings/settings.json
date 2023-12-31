@@ -314,5 +314,6 @@
             "yellow": "#808000"
         }
     ],
-    "themes": []
+    "themes": [],
+    "windowingBehavior": "useAnyExisting"
 }
