@@ -2,7 +2,6 @@ curl https://raw.githubusercontent.com/voltamage/win/main/setup.bat -O && setup.
   
   
 Mullvad:  
-  
 User Interface settings:  
 	Monochromatic Icon: On  
 VPN settings:  
@@ -15,3 +14,9 @@ VPN settings:
 WireGuard settings:  
 	Obfuscation: Off  
 	Quantum resistant tunnel: On  
+  
+  
+Display:  
+NVIDIA Control Panel:  
+	Change resolution:  
+	Output dynamic range: Full
