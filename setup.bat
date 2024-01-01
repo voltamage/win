@@ -6,6 +6,10 @@ powershell -command "iwr -useb get.scoop.sh | iex"
 echo Restart script from the main user folder
 pause
 
+powershell -command "scoop install git"
+powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
+powershell -command "git clone git@github.com:voltamage/win.git  C:\Users\main\win"
+
 powershell -command "scoop bucket add ACooper81_scoop-apps https://github.com/ACooper81/scoop-apps"
 powershell -command "scoop bucket add extras"
 powershell -command "scoop bucket add games"
@@ -29,38 +33,33 @@ powershell -command "wsl --update"
 powershell -command "wsl --update"
 
 powershell -command "scoop install extras/vcredist"
+powershell -command "sudo scoop install nonportable/nvidia-display-driver-dch-np"
 
 powershell -command "sudo scoop install nonportable/mullvadvpn-np"
 echo Set up vpn and return to this window
 pause
 
+powershell -command "scoop install extras/archwsl"
+echo Start arch and hard kill fail loop, update keyring before full system, come back to this window after
+pause
+
 powershell -command "scoop install extras/lazygit"
 powershell -command "scoop install extras/psreadline"
 powershell -command "scoop install main/chezmoi"
-powershell -command "scoop install main/git"
 powershell -command "scoop install main/neovim"
 powershell -command "scoop install main/scoop-search"
 powershell -command "scoop install main/starship"
 powershell -command "scoop install main/zoxide"
 powershell -command "scoop install nerd-fonts/JetBrainsMono-NF-Mono"
 powershell -command "scoop install versions/windows-terminal-preview"
-powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
 
 powershell -command "scoop install extras/librewolf"
 powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
 powershell -command "scoop install games/steam"
-powershell -command "scoop install nonportable/nvidia-display-driver-dch-np"
-powershell -command "scoop install versions/everything-alpha"
 
-powershell -command "git clone git@github.com:voltamage/win.git  C:\Users\main\win"
 powershell -command "chezmoi apply"
 
-powershell -command "scoop install extras/archwsl"
-echo Start arch and hard kill fail loop, update keyring before full system, come back to this window after
-pause
-
 powershell -command "C:\Users\main\scoop\apps\7zip\current\install-context.reg"
-powershell -command "C:\Users\main\scoop\apps\everything-alpha\current\install-context.reg"
 powershell -command "C:\Users\main\scoop\apps\windows-terminal-preview\current\install-context.reg"
 pause
