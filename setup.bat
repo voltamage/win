@@ -26,22 +26,23 @@ powershell -command "scoop bucket add extras"
 powershell -command "scoop bucket add games"
 powershell -command "scoop bucket add nerd-fonts"
 powershell -command "scoop bucket add nonportable"
+powershell -command "scoop bucket add versions"
 
 powershell -command "scoop install extras/vcredist"
 
-powershell -command "scoop install nonportable/mullvadvpn-np"
+powershell -command "sudo scoop install nonportable/mullvadvpn-np"
 echo Set up vpn and return to this window
 pause
 
 powershell -command "scoop install chezmoi"
 powershell -command "scoop install extras/lazygit"
 powershell -command "scoop install extras/psreadline"
-powershell -command "scoop install extras/windows-terminal"
 powershell -command "scoop install git"
 powershell -command "scoop install neovim"
 powershell -command "scoop install nerd-fonts/JetBrainsMono-NF-Mono"
 powershell -command "scoop install scoop-search"
 powershell -command "scoop install starship"
+powershell -command "scoop install versions/windows-terminal-preview"
 powershell -command "scoop install zoxide"
 powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
 
