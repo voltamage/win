@@ -45,7 +45,7 @@ powershell -command "scoop install versions/windows-terminal-preview"
 powershell -command "scoop install zoxide"
 powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
 
-powershell -command "scoop install extras/nvcleanstall"
+powershell -command "scoop install nonportable/nvidia-display-driver-dch-np"
 powershell -command "scoop install extras/librewolf"
 powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
