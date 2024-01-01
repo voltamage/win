@@ -50,9 +50,7 @@
                 "size": 11.0,
                 "weight": "medium"
             },
-            "opacity": 85,
             "scrollbarState": "hidden",
-            "useAcrylic": true
         },
         "list": 
         [
@@ -316,6 +314,5 @@
         }
     ],
     "themes": [],
-    "useAcrylicInTabRow": true,
     "windowingBehavior": "useAnyExisting"
 }
