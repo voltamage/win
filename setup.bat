@@ -17,9 +17,10 @@ powershell -command "scoop bucket add nerd-fonts"
 powershell -command "scoop bucket add nonportable"
 powershell -command "scoop bucket add versions"
 
-powershell -command "scoop install ACooper81_scoop-apps/PSWindowsUpdate-PSModule"
 powershell -command "scoop install main/gsudo"
 powershell -command "sudo Rename-Computer -NewName 'WINDOWS'"
+
+powershell -command "scoop install ACooper81_scoop-apps/PSWindowsUpdate-PSModule"
 echo Don't restart when asked during the windows update, wait until WSL features come online
 pause
 powershell -command "sudo Install-WindowsUpdate"
@@ -32,16 +33,16 @@ pause
 powershell -command "wsl --update"
 powershell -command "wsl --update"
 
-powershell -command "scoop install extras/vcredist"
-powershell -command "sudo scoop install nonportable/nvidia-display-driver-dch-np"
+powershell -command "scoop install extras/archwsl"
+echo Start arch and hard kill fail loop, update keyring before full system, come back to this window after
+pause
 
 powershell -command "sudo scoop install nonportable/mullvadvpn-np"
 echo Set up vpn and return to this window
 pause
 
-powershell -command "scoop install extras/archwsl"
-echo Start arch and hard kill fail loop, update keyring before full system, come back to this window after
-pause
+powershell -command "scoop install extras/vcredist"
+powershell -command "sudo scoop install nonportable/nvidia-display-driver-dch-np"
 
 powershell -command "scoop install extras/lazygit"
 powershell -command "scoop install extras/psreadline"
@@ -53,12 +54,12 @@ powershell -command "scoop install main/zoxide"
 powershell -command "scoop install nerd-fonts/JetBrainsMono-NF-Mono"
 powershell -command "scoop install versions/windows-terminal-preview"
 
+powershell -command "chezmoi apply"
+
 powershell -command "scoop install extras/librewolf"
 powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
 powershell -command "scoop install games/steam"
-
-powershell -command "chezmoi apply"
 
 powershell -command "C:\Users\main\scoop\apps\7zip\current\install-context.reg"
 powershell -command "C:\Users\main\scoop\apps\windows-terminal-preview\current\install-context.reg"
