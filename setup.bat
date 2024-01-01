@@ -35,4 +35,7 @@ powershell -command "scoop bucket add nerd-fonts"
 powershell -command "scoop bucket add versions"
 powershell -command "scoop install chezmoi nerd-fonts/JetBrainsMono-NF-Mono extras/psreadline scoop-search starship versions/windows-terminal-preview zoxide"
 powershell -command "chezmoi apply"
+
+powershell -command "C:\Users\main\scoop\apps\7zip\current\install-context.reg"
+powershell -command "C:\Users\main\scoop\apps\windows-terminal-preview\current\install-context.reg"
 pause
