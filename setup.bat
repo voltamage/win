@@ -1,3 +1,6 @@
+powershell -command "Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0"
+powershell -command "Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0"
+
 powershell -command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 powershell -command "iwr -useb get.scoop.sh | iex"
 echo Restart script from the main user folder
@@ -24,16 +27,13 @@ powershell -command "wsl --update"
 pause
 
 powershell -command "scoop bucket add extras"
+powershell -command "scoop bucket add nerd-fonts"
+
 powershell -command "scoop install extras/archwsl"
 echo Start arch and hard kill fail loop, update keyring before full system, come back to this window after
 pause
 
-powershell -command "Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0"
-powershell -command "Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0"
-
-powershell -command "scoop bucket add nerd-fonts"
-powershell -command "scoop bucket add versions"
-powershell -command "scoop install chezmoi nerd-fonts/JetBrainsMono-NF-Mono extras/psreadline scoop-search starship versions/windows-terminal-preview zoxide"
+powershell -command "scoop install chezmoi nerd-fonts/JetBrainsMono-NF-Mono extras/psreadline scoop-search starship extras/windows-terminal zoxide"
 powershell -command "chezmoi apply"
 
 powershell -command "C:\Users\main\scoop\apps\7zip\current\install-context.reg"
