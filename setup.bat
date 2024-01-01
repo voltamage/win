@@ -51,6 +51,7 @@ powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
 powershell -command "scoop install games/steam"
 powershell -command "scoop install nonportable/nvidia-display-driver-dch-np"
+powershell -command "scoop install versions/everything-alpha"
 
 powershell -command "git clone git@github.com:voltamage/win.git  C:\Users\main\win"
 powershell -command "chezmoi apply"
@@ -60,5 +61,6 @@ echo Start arch and hard kill fail loop, update keyring before full system, come
 pause
 
 powershell -command "C:\Users\main\scoop\apps\7zip\current\install-context.reg"
+powershell -command "C:\Users\main\scoop\apps\everything-alpha\current\install-context.reg"
 powershell -command "C:\Users\main\scoop\apps\windows-terminal-preview\current\install-context.reg"
 pause
