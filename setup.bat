@@ -6,9 +6,16 @@ powershell -command "iwr -useb get.scoop.sh | iex"
 echo Restart script from the main user folder
 pause
 
-powershell -command "scoop install gsudo"
+powershell -command "scoop bucket add ACooper81_scoop-apps https://github.com/ACooper81/scoop-apps"
+powershell -command "scoop bucket add extras"
+powershell -command "scoop bucket add games"
+powershell -command "scoop bucket add nerd-fonts"
+powershell -command "scoop bucket add nonportable"
+powershell -command "scoop bucket add versions"
+
+powershell -command "scoop install ACooper81_scoop-apps/PSWindowsUpdate-PSModule"
+powershell -command "scoop install main/gsudo"
 powershell -command "sudo Rename-Computer -NewName 'WINDOWS'"
-powershell -command "sudo Install-Module PSWindowsUpdate"
 echo Don't restart when asked during the windows update, wait until WSL features come online
 pause
 powershell -command "sudo Install-WindowsUpdate"
@@ -21,35 +28,29 @@ pause
 powershell -command "wsl --update"
 powershell -command "wsl --update"
 
-powershell -command "scoop bucket add extras"
-powershell -command "scoop bucket add games"
-powershell -command "scoop bucket add nerd-fonts"
-powershell -command "scoop bucket add nonportable"
-powershell -command "scoop bucket add versions"
-
 powershell -command "scoop install extras/vcredist"
 
 powershell -command "sudo scoop install nonportable/mullvadvpn-np"
 echo Set up vpn and return to this window
 pause
 
-powershell -command "scoop install chezmoi"
 powershell -command "scoop install extras/lazygit"
 powershell -command "scoop install extras/psreadline"
-powershell -command "scoop install git"
-powershell -command "scoop install neovim"
+powershell -command "scoop install main/chezmoi"
+powershell -command "scoop install main/git"
+powershell -command "scoop install main/neovim"
+powershell -command "scoop install main/scoop-search"
+powershell -command "scoop install main/starship"
+powershell -command "scoop install main/zoxide"
 powershell -command "scoop install nerd-fonts/JetBrainsMono-NF-Mono"
-powershell -command "scoop install scoop-search"
-powershell -command "scoop install starship"
 powershell -command "scoop install versions/windows-terminal-preview"
-powershell -command "scoop install zoxide"
 powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
 
-powershell -command "scoop install nonportable/nvidia-display-driver-dch-np"
 powershell -command "scoop install extras/librewolf"
 powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
 powershell -command "scoop install games/steam"
+powershell -command "scoop install nonportable/nvidia-display-driver-dch-np"
 
 powershell -command "git clone git@github.com:voltamage/win.git  C:\Users\main\win"
 powershell -command "chezmoi apply"
