@@ -41,7 +41,9 @@
     {
         "defaults": 
         {
+            "bellStyle": "none",
             "colorScheme": "GruvboxMaterialMediumDark",
+            "cursorShape": "filledBox",
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font Mono",
@@ -49,6 +51,7 @@
                 "weight": "medium"
             },
             "opacity": 85,
+            "scrollbarState": "hidden",
             "useAcrylic": true
         },
         "list": 
