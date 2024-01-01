@@ -51,7 +51,7 @@ powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
 powershell -command "scoop install games/steam"
 
-powershell -command "git clone git@github.com:voltamage/win.git"
+powershell -command "git clone git@github.com:voltamage/win.git  C:\Users\main\win"
 powershell -command "chezmoi apply"
 
 powershell -command "scoop install extras/archwsl"
