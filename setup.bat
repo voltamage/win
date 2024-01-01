@@ -20,7 +20,6 @@ pause
 
 powershell -command "wsl --update"
 powershell -command "wsl --update"
-pause
 
 powershell -command "scoop bucket add extras"
 powershell -command "scoop bucket add games"
@@ -46,7 +45,7 @@ powershell -command "scoop install versions/windows-terminal-preview"
 powershell -command "scoop install zoxide"
 powershell -command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
 
-powershell -command "scoop install extras/nvcleaninstall"
+powershell -command "scoop install extras/nvcleanstall"
 powershell -command "scoop install extras/librewolf"
 powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
