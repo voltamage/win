@@ -19,4 +19,6 @@ WireGuard settings:
 Display:  
 NVIDIA Control Panel:  
 	Change resolution:  
-	Output dynamic range: Full
+	Output dynamic range: Full  
+  
+Night Light: On  
