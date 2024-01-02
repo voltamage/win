@@ -44,9 +44,10 @@ pause
 powershell -command "scoop install extras/vcredist"
 powershell -command "sudo scoop install nonportable/nvidia-display-driver-dch-np"
 
+powershell -command "scoop install main/chezmoi"
+
 powershell -command "scoop install extras/lazygit"
 powershell -command "scoop install extras/psreadline"
-powershell -command "scoop install main/chezmoi"
 powershell -command "scoop install main/neovim"
 powershell -command "scoop install main/scoop-search"
 powershell -command "scoop install main/starship"
@@ -64,3 +65,4 @@ powershell -command "scoop install games/steam"
 powershell -command "C:\Users\main\scoop\apps\7zip\current\install-context.reg"
 powershell -command "C:\Users\main\scoop\apps\windows-terminal-preview\current\install-context.reg"
 pause
+
