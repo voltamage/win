@@ -15,6 +15,7 @@ powershell -command "scoop bucket add extras"
 powershell -command "scoop bucket add games"
 powershell -command "scoop bucket add nerd-fonts"
 powershell -command "scoop bucket add nonportable"
+powershell -command "scoop bucket add sysinternals"
 powershell -command "scoop bucket add versions"
 
 powershell -command "scoop install main/gsudo"
@@ -57,12 +58,17 @@ powershell -command "scoop install versions/windows-terminal-preview"
 
 powershell -command "chezmoi apply"
 
+powershell -command "scoop install extras/discord"
 powershell -command "scoop install extras/librewolf"
 powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
 powershell -command "scoop install games/steam"
 
+powershell -command "scoop install extras/bulk-crap-uninstaller"
+powershell -command "scoop install extras/shutup10"
+powershell -command "scoop install sysinternals/autoruns"
+powershell -command "scoop install sysinternals/process-explorer"
+
 powershell -command "C:\Users\main\scoop\apps\7zip\current\install-context.reg"
 powershell -command "C:\Users\main\scoop\apps\windows-terminal-preview\current\install-context.reg"
 pause
-
