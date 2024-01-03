@@ -35,7 +35,7 @@ powershell -command "wsl --update"
 powershell -command "wsl --update"
 
 powershell -command "scoop install extras/bulk-crap-uninstaller"
-powershell -command "C:\Users\main\win\uninstall.bat"
+powershell -command "sudo C:\Users\main\win\uninstall.bat"
 
 powershell -command "scoop install extras/shutup10"
 echo Enable recommended settings in ShutUp10, reboot after
