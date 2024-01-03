@@ -20,6 +20,7 @@ powershell -command "scoop bucket add versions"
 
 powershell -command "scoop install main/gsudo"
 powershell -command "sudo Rename-Computer -NewName 'WINDOWS'"
+powershell -command "sudo powercfg -h off"
 
 powershell -command "scoop install ACooper81_scoop-apps/PSWindowsUpdate-PSModule"
 echo Don't restart when asked during the windows update, wait until WSL features come online
