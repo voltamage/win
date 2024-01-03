@@ -9,7 +9,7 @@ VPN settings:
 	Auto-connect: On  
 	Local network sharing: On  
 	DNS content blockers: All  
-	Lockdown mode: Off  
+	Lockdown mode: On  
 	Tunnel protocol: WireGuard  
 WireGuard settings:  
 	Obfuscation: Off  
