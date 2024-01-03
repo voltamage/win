@@ -34,6 +34,13 @@ pause
 powershell -command "wsl --update"
 powershell -command "wsl --update"
 
+powershell -command "scoop install extras/bulk-crap-uninstaller"
+powershell -command "C:\Users\main\win\uninstall.bat"
+
+powershell -command "scoop install extras/shutup10"
+echo Enable recommended settings in ShutUp10, reboot after
+pause
+
 powershell -command "scoop install extras/archwsl"
 echo Start arch and hard kill fail loop, update keyring before full system, come back to this window after
 pause
@@ -58,14 +65,11 @@ powershell -command "scoop install versions/windows-terminal-preview"
 
 powershell -command "chezmoi apply"
 
-powershell -command "scoop install extras/discord"
 powershell -command "scoop install extras/librewolf"
 powershell -command "scoop install extras/spotify"
 powershell -command "scoop install games/prismlauncher"
 powershell -command "scoop install games/steam"
 
-powershell -command "scoop install extras/bulk-crap-uninstaller"
-powershell -command "scoop install extras/shutup10"
 powershell -command "scoop install sysinternals/autoruns"
 powershell -command "scoop install sysinternals/process-explorer"
 
