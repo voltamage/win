@@ -22,3 +22,7 @@ NVIDIA Control Panel:
 	Output dynamic range: Full  
   
 Night Light: On  
+  
+Wallpaper is in the win/files folder  
+  
+TODO: Remove mouse accel later  
