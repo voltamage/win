@@ -24,5 +24,7 @@ NVIDIA Control Panel:
 Night Light: On  
   
 Wallpaper is in the win/files folder  
+Clean Taskbar  
+Taskbar settings set small icons  
   
 TODO: Remove mouse accel later  
