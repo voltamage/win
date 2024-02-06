@@ -27,4 +27,33 @@ Wallpaper is in the win/files folder
 Clean Taskbar  
 Taskbar settings set small icons  
   
+Steam:
+    Enable the Steam Overlay while in-game: On
+    In-game FPS counter: Top-left
+  
+scoop install versions/everything-alpha (because it breaks within a script)  
+scoop install nonportable/vmware-workstation-player-np  
+scoop install main/btop-lhm  
+Color theme: gruvbox_material_dark
+Graph symbol: braille
+  
+Power & sleep  
+    When plugged in, PC goes to sleep after: Never  
+ 
+Game Bar: false  
+Game Mode: true  
+  
+Manage sound devices: Disable controller speaker and display hdmi audio
+
+Explorer: View File name extensions and Hidden items
+Start Menu: Remove third-party folders
+  
+Graphics settings:  
+    Hardware-accelerated GPU scheduling: On  
+    Graphics performance preference: Desktop app (add game executables here and set them to high performance)
+
+Application settings:
+    Disable fullscreen optimizations: true
+    Change high DPI settings: High DPI scaling override: true, performed by: Application
+
 TODO: Remove mouse accel later  
